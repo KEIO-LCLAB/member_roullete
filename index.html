@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="main.js"></script>
+    <title>member roullete</title>
+</head>
+
+<body>
+    <input type="checkbox" onClick="toggle(this, 'doctor')" checked /> D
+    <input type="checkbox" name="doctor" value="Nick" checked /> Nick <br>
+
+    <input type="checkbox" onClick="toggle(this, 'master2')" checked /> M2
+    <input type="checkbox" name="master2" value="Tony" checked /> Tony
+    <input type="checkbox" name="master2" value="Sato" checked /> Sato
+    <input type="checkbox" name="master2" value="Suzuki" checked /> Suzuki
+    <input type="checkbox" name="master2" value="Munakata" checked /> Munakata
+    <input type="checkbox" name="master2" value="Miyazawa" checked /> Miyazawa <br>
+
+    <input type="checkbox" onClick="toggle(this, 'master1')" checked /> M1
+    <input type="checkbox" name="master1" value="Arthur" checked /> Arthur
+    <input type="checkbox" name="master1" value="Cho" checked /> Cho
+    <input type="checkbox" name="master1" value="Matsui" checked /> Matsui
+    <input type="checkbox" name="master1" value="Matsuo" checked /> Matsuo <br>
+
+    <input type="checkbox" onClick="toggle(this, 'bachelor4')" checked /> B4
+    <input type="checkbox" name="bachelor4" value="Baba" checked /> Baba
+    <input type="checkbox" name="bachelor4" value="Yamamoto" checked /> Yamamoto
+    <input type="checkbox" name="bachelor4" value="Takayanagi" checked /> Takayanagi
+    <input type="checkbox" name="bachelor4" value="Kawasaki" checked /> Kawasaki
+    <input type="checkbox" name="bachelor4" value="Ito" checked /> Ito <br>
+
+    <input type="button" value="SHUFFLE" onClick="getQueue()" />
+    <p>
+        <span id="presentation_queue"></span>
+    </p>
+</body>
+
+</html>
