@@ -1,5 +1,7 @@
 # member roullete
 
+![スクリーンショット](img/screenshot.png)
+
 ## 使い方
 
 * 発表者にチェックを入れます
