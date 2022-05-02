@@ -9,7 +9,7 @@ function getQueue() {
     var result_queue = [];
     var lab_member = [];
     var str ="";
-    let checkbox = document.getElementById('pair_check');    
+    var checkbox = document.getElementById('pair_check');    
     lab_member = lab_member.concat(
         Array.from(document.getElementsByName("doctor")),
         Array.from(document.getElementsByName("master2")),
@@ -26,6 +26,7 @@ function getQueue() {
     if(!checkbox.checked){
         str = result_queue.join("");
     }else{
+        console.log("pair mode\n");
         for (var i = 0; i < result_queue.length; i++) {
             var nameWithoutNl = result_queue[i].substring(0, result_queue[i].length-1);
             str += nameWithoutNl;
