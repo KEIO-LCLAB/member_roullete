@@ -8,6 +8,8 @@ function fisherYatesShuffle(arr) {
 function getQueue() {
     var result_queue = [];
     var lab_member = [];
+    var str ="";
+    let checkbox = document.getElementById('pair_check');    
     lab_member = lab_member.concat(
         Array.from(document.getElementsByName("doctor")),
         Array.from(document.getElementsByName("master2")),
@@ -21,8 +23,36 @@ function getQueue() {
         }
     }
     fisherYatesShuffle(result_queue);
-    str = result_queue.join("");
+    if(!checkbox.checked){
+        str = result_queue.join("");
+    }else{
+        for (var i = 0; i < result_queue.length; i++) {
+            var nameWithoutNl = result_queue[i].substring(0, result_queue[i].length-1);
+            str += nameWithoutNl;
+            if(result_queue.length % 2 == 0){
+                if(i % 2 == 0){
+                    str += "  & ";
+                }else{
+                    str += "\n";
+                }
+            }else{
+                if(i % 2 == 0){
+                    if(i != result_queue.length - 1){
+                        str += "  & ";
+                    }
+                }else{
+                    if(i == result_queue.length - 2){
+                        str += " & ";
+                    }else{
+                        str += "\n";
+                    }
+                    
+                }
+            }
+        }
+    }
     document.getElementById("presentation_queue").innerText = str;
+    
 }
 
 function toggle(source, target) {
@@ -31,3 +61,4 @@ function toggle(source, target) {
         checkboxes[i].checked = source.checked;
     }
 }
+
